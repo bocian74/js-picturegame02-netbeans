@@ -1,5 +1,5 @@
 var maindiv = document.getElementById("main");
-maindiv.style.visibility = 'hidden';
+maindiv.style.display = 'none';
 var started = false;
 
 var startTime;
@@ -64,7 +64,7 @@ function celebrate(timeDiff) {
 }
 
 function resetGame(){
-	maindiv.style.visibility = 'hidden';
+	maindiv.style.display = 'none';
 	var won = false;
 	started = false;
 	targetimage.setAttribute("src",questionmark);
@@ -96,7 +96,7 @@ for (var i=0; i<images.length;i++){
 targetimage.onclick = function() {
             if (started==false){
             drawPicture(imageClicked);
-            maindiv.style.visibility = 'visible';
+            maindiv.style.display = 'block';
             started=true;
             startTime = new Date();
             console.log(startTime);
